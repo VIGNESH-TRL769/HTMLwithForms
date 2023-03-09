@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CRUD.css">
+    <script src="CRUD.js"></script>
+    <title>CRUD Application</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>CRUD</h1>
+        </div>
+        <div class="login">
+
+                <label>Name</label>
+                <input type="text" id="name" class="inputs" onkeyup="validate(this)">
+                <span id="namealert"></span>
+                <label>Phonenumber</label>
+                <input type="number" id="phonenumber"  class="inputs" onkeyup="validate(this)">
+                <span id="phonealert"></span>
+                <label>Date Of Birth</label>
+                <input type="date" id="date"  class="inputs">
+                <label>City</label>
+                <input type="text" id="city"  class="inputs" onkeyup="validate(this)">
+                <span id="cityalert"></span>
+                <label>Address</label>
+                <textarea id="address" rows="5" cols="40"></textarea>
+                <br>
+                <div>
+                    <input type="submit" value="Add" onclick="submitForm()" class="submit">
+                    <input type="reset" value="reset" class="reset" onclick="reset()">
+                    
+                </div>
+                <br>
+                <span id="view">
+
+                </span>
+                <br>
+        </div>
+        <br>
+        <div class="display">
+            <table id="tableContent" class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phonenumber</th>
+                        <th>DOB</th>
+                        <th>City</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+</body>
+</html>
