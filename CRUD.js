@@ -1,7 +1,7 @@
 let currentRow=null;
 let arr=[];
 let valid=true;
-validate =(object)=>
+let validate =(object)=>
 {
     if(object.id==="name")
     {
@@ -74,7 +74,7 @@ validate =(object)=>
     
 }
 
-submitForm = () =>
+let submitForm = () =>
 {
     let name=document.getElementById("name").value;
     let phonenumber=document.getElementById("phonenumber").value;
@@ -84,7 +84,7 @@ submitForm = () =>
     if(valid && name!="" && phonenumber!="" && date!="" && city!="" && address!="")
     {
         alert("Successfully Submited")
-        var arr=readFormData();
+        let arr=readFormData();
         insertFormData(arr);
         reset();
     }
@@ -92,16 +92,16 @@ submitForm = () =>
         document.getElementById("view").innerHTML="* Please Check the All the Fields";
     }
 }
-readFormData =()=>
+let readFormData =()=>
 {
     
-    arr.push({'name':document.getElementById("name").value,'phonenumber':document.getElementById("phonenumber").value,'date':document.getElementById("date").value,'city':document.getElementById("city").value,'date':document.getElementById("date").value,'address':document.getElementById("address").value,});
+    arr.push({'name':document.getElementById("name").value,'phonenumber':document.getElementById("phonenumber").value,'date':document.getElementById("date").value,'city':document.getElementById("city").value,'address':document.getElementById("address").value,});
     return arr;
 }
-insertFormData = (arr) =>
+let insertFormData = (arr) =>
 {
     let a="";
-    for(i=0;i<arr.length;i++)
+    for(let i=0;i<arr.length;i++)
     {
        
         a+="<tr><td>"+arr[i].name+"</td><td>"+arr[i].phonenumber+"</td><td>"+arr[i].date+"</td><td>"+arr[i].city+"</td><td>"+arr[i].address+"</td></tr>";
@@ -111,7 +111,7 @@ insertFormData = (arr) =>
 
 }
 
-reset = () =>
+let reset = () =>
 {
     document.getElementById("view").innerHTML="";
     document.getElementById('name').value="";
