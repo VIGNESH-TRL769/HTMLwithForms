@@ -14,18 +14,18 @@
             <h1>CRUD</h1>
         </div>
         <div class="login">
-
                 <label>Name</label>
-                <input type="text" id="name" class="inputs" onkeyup="validate(this)">
+                <input type="text" id="name" class="inputs" onkeyup="namevalidate(this)">
                 <span id="namealert"></span>
                 <label>Phonenumber</label>
-                <input type="number" id="phonenumber"  class="inputs" onkeyup="validate(this)">
+                <input type="number" id="phonenumber"  class="inputs" onkeyup="phonevalidate(this)">
                 <span id="phonealert"></span>
                 <label>Date Of Birth</label>
-                <input type="date" id="date"  class="inputs">
-                <label>City</label>
-                <input type="text" id="city"  class="inputs" onkeyup="validate(this)">
-                <span id="cityalert"></span>
+                <input type="date" id="date"  class="inputs" onkeyup="datevalidate(this)">
+                <span id="datealert"></span>
+                <label>Email</label>
+                <input type="email" id="email"  class="inputs" onkeyup="emailvalidate(this)">
+                <span id="emailalert"></span>
                 <label>Address</label>
                 <textarea id="address" rows="5" cols="40"></textarea>
                 <br>
@@ -43,12 +43,13 @@
         <br>
         <div class="display">
             <table id="tableContent" class="table">
+                <caption></caption>
                 <thead>
                     <tr>
                         <th>Name</th>
                         <th>Phonenumber</th>
                         <th>DOB</th>
-                        <th>City</th>
+                        <th>Email</th>
                         <th>Address</th>
                     </tr>
                 </thead>
